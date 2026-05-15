@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamen Rider Fanpage</title>
+    <!-- Liên kết đến file CSS bên ngoài -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Thanh điều hướng (Menu) -->
+    <nav class="navbar">
+        <div class="nav-brand">KR WORLD</div>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home" class="active" onclick="switchTab('home', this)">Home</a></li>
+            <li><a href="#riders" onclick="switchTab('riders', this)">Riders</a></li>
+            <li><a href="#forms" onclick="switchTab('forms', this)">Forms</a></li>
+            <li><a href="#systems" onclick="switchTab('systems', this)">Rider Systems</a></li>
+            <li><a href="#about" onclick="switchTab('about', this)">About Me</a></li>
+        </ul>
+    </nav>
+
+    <!-- TRANG 1: HOME -->
+    <main id="home" class="tab-content active">
+        <h1 class="page-title">Welcome to Kamen Rider World</h1>
+        
+        <!-- Slider -->
+        <div class="slider-wrapper" id="slider-wrapper">
+            <div class="slider-container">
+    <div class="slide active">
+        <a href="./zero-one.html"><img src="./img/KR01-Zero-Onerisinghopper.webp" alt="Zero-One"></a>
+    </div>
+    <div class="slide">
+        <a href="saber.html"><img src="./img/KRSa-Saberbravedragon.webp" alt="Saber"></a>
+    </div>
+    <div class="slide">
+        <a href="geats.html"><img src="./img/KRGe-Geatsmagnumboost.webp" alt="Geats"></a>
+    </div>
+</div>
+            <!-- Nút điều hướng Slider -->
+            <button class="slider-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="slider-btn next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+        <p class="subtitle">Henshin! Khám phá thế giới của các chiến binh mặt nạ.</p>
+    </main>
+
+    <!-- TRANG 2: RIDERS -->
+    <main id="riders" class="tab-content">
+        <h1 class="page-title">Danh Sách Kamen Rider</h1>
+        <div class="grid-container">
+            <!-- Ảnh sẽ tự cắt gọn gàng nhờ CSS object-fit -->
+            <div class="card" onclick="location.href='geats.html'">
+    <img src="./img/KRGe-Geatsmagnumboost.webp" alt="Geats">
+    <div class="card-title">Kamen Rider Geats</div>
+</div>
+<div class="card" onclick="location.href='zero-one.html'">
+    <img src="./img/KR01-Zero-Onerisinghopper.webp" alt="Zero-One">
+    <div class="card-title">Kamen Rider Zero-One</div>
+</div>
+<div class="card" onclick="location.href='saber.html'">
+    <img src="./img/KRSa-Saberbravedragon.webp" alt="Saber">
+    <div class="card-title">Kamen Rider Saber</div>
+</div>
+        </div>
+    </main>
+
+    <!-- TRANG 3: FORMS -->
+    <main id="forms" class="tab-content">
+        <h1 class="page-title">Các Hình Thái (Forms)</h1>
+        
+        <div class="form-group">
+            <h2>Kamen Rider Geats</h2>
+            <div class="grid-container form-grid">
+                <div class="card" onclick="location.href='geats.html'">
+                    <img src="./img/KRGe-Geatsmagnumboost.webp" alt="Magnum Boost">
+                    <div class="card-title">Magnum Boost Form</div>
+                </div>
+                <div class="card" onclick="location.href='geats-laser_boost.html'">
+                    <img src="./img/KRGe-Geatslaserboost.webp" alt="Laser Boost">
+                    <div class="card-title">Laser Boost Form</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <h2>Kamen Rider Zero-One</h2>
+            <div class="grid-container form-grid">
+                <div class="card" onclick="location.href='zero-one.html'">
+                    <img src="./img/KR01-Zero-Onerisinghopper.webp" alt="Rising Hopper">
+                    <div class="card-title">Rising Hopper</div>
+                </div>
+                <div class="card" onclick="location.href='metal_cluster.html'">
+                    <img src="./img/KR01-Zero-Onemetalclusterhopper.webp" alt="Metal Cluster">
+                    <div class="card-title">Metal Cluster Hopper</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <h3>Kamen Rider Saber</h3>
+            <div class="grid-container form-grid">
+                <div class="card" onclick="location.href='saber.html'">
+                    <img src="./img/KRSa-Saberbravedragon.webp" alt="Brave Dragon">
+                    <div class="card-title">Brave Dragon</div>
+                </div>
+                <div class="card" onclick="location.href='dragonic_knight.html'">
+                    <img src="./img/KRSa-Saberdragonicknight.webp" alt="Dragonic Knight">
+                    <div class="card-title">Dragonic Knight</div>
+                </div>
+                <div class="card" onclick="location.href='primitive.html'">
+                    <img src="./img/KRSa-Saberprimitivedragonbravedragon.webp" alt="Primitive Dragon">
+                    <div class="card-title">Primitive Dragon</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+        <!-- TRANG 4: RIDER SYSTEMS -->
+<main id="systems" class="tab-content">
+    <h1 class="page-title">Rider Systems</h1>
+    <p class="subtitle" style="margin-bottom: 20px;">Bấm vào hình ảnh hệ thống để xem chi tiết.</p>
+    
+    <!-- Accordion cho Rider Systems -->
+    <div class="system-accordion">
+        
+        <div class="accordion-item" onclick="toggleAccordion(this)">
+            <!-- Phần Header hiển thị mặc định: Chứa Ảnh và Tiêu đề -->
+            <div class="accordion-header">
+                <img src="./img/KRGe-Desire_Driver_29.webp" alt="Desire Driver" class="accordion-img">
+                <div class="header-title-bar">
+                    <h3>Desire Driver System (Geats Series)</h3>
+                    <span class="icon">+</span>
+                </div>
+            </div>
+            <!-- Phần Body bị ẩn: Chỉ chứa thông tin chi tiết -->
+            <div class="accordion-body">
+                <p>Hệ thống thắt lưng được cung cấp cho những người tham gia Desire Grand Prix. Bằng cách sử dụng các Raise Buckle, người dùng có thể trang bị các vũ khí và giáp khác nhau.</p>
+            </div>
+        </div>
+        
+        <div class="accordion-item" onclick="toggleAccordion(this)">
+            <div class="accordion-header">
+                <img src="./img/KR01-Hiden_Zero-One_Driver.webp" alt="Zero-One Driver" class="accordion-img">
+                <div class="header-title-bar">
+                    <h3>Hiden Zero-One Driver (Zero-One Series)</h3>
+                    <span class="icon">+</span>
+                </div>
+            </div>
+            <div class="accordion-body">
+                <p>Thắt lưng do Hiden Intelligence chế tạo. Cần sử dụng Progrise Keys chứa dữ liệu sinh học của các loài động vật để kích hoạt hình thái tương ứng.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item" onclick="toggleAccordion(this)">
+            <div class="accordion-header">
+                <img src="./img/KRSa-Seiken_Swordriver_29.webp" alt="Seiken Swordriver" class="accordion-img">
+                <div class="header-title-bar">
+                    <h3>Seiken Swordriver (Saber Series)</h3>
+                    <span class="icon">+</span>
+                </div>
+            </div>
+            <div class="accordion-body">
+                <p>Hệ thống sử dụng các Wonder Ride Book, là những quyển sách chứa sức mạnh từ các câu chuyện từ thần thú, sách động vật, hoặc sách về các câu chuyện từ những tác phẩm ngoài đời.</p>
+            </div>
+        </div>
+   </div>
+    </main> 
+
+<main id="about" class="tab-content">
+    <h1 class="page-title">About Me & Mã Nguồn</h1>
+    <p class="subtitle">Dự án Fanpage Kamen Rider được xây dựng hoàn toàn bằng HTML, CSS và Vanilla JavaScript.</p>
+    
+    <div style="text-align: center; margin: 40px 0;">
+        <a href="LINK_GITHUB_CUA_BAN" target="_blank" class="github-btn">
+            <svg height="24" width="24" viewBox="0 0 16 16" style="fill: white; margin-right: 10px; vertical-align: middle;">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+            </svg>
+            Xem Toàn Bộ Source Code (GitHub)
+        </a>
+    </div>
+    
+    <h2 style="color: var(--red-kr); border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 20px;">Trích đoạn Code Tiêu Biểu</h2>
+
+    <div class="code-box">
+        <h3>File: style.css (Hiệu ứng kính mờ Navbar)</h3>
+        <p>Đoạn code CSS tạo hiệu ứng Glassmorphism mượt mà cho thanh menu ngang:</p>
+        <pre><code>
+.navbar {
+    background-color: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(15px);
+    border-bottom: 2px solid var(--red-kr);
+    box-shadow: 0 0 20px rgba(230, 0, 0, 0.3);
+}
+        </code></pre>
+    </div>
+    
+    <div class="code-box">
+        <h3>File: main.js (Logic của Slider)</h3>
+        <p>Hàm xử lý chuyển đổi vòng lặp vô tận cho hình ảnh Slider:</p>
+        <pre><code>
+function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    
+    if (index >= slides.length) currentSlide = 0;
+    else if (index < 0) currentSlide = slides.length - 1;
+    else currentSlide = index;
+
+    slides[currentSlide].classList.add('active');
+}
+        </code></pre>
+    </div>
+</main>
+
+    <!-- Gọi file JS ở cuối body để tối ưu tốc độ tải -->
+    <script src="./main.js"></script>
+</body>
+</html>

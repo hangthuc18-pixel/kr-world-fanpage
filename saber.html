@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết Kamen Rider Saber - KR WORLD</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        /* CSS riêng cho trang chi tiết để tăng độ ngầu */
+        .detail-hero {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            padding: 60px 20px;
+            background: linear-gradient(180deg, #111 0%, var(--bg-dark) 100%);
+            border-bottom: 1px solid #333;
+        }
+        .detail-img {
+            flex: 1;
+            text-align: center;
+        }
+        .detail-img img {
+            max-width: 100%;
+            height: 500px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 20px var(--red-kr));
+        }
+        .detail-info {
+            flex: 1;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--red-kr);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .quote {
+            font-style: italic;
+            color: #888;
+            border-left: 3px solid var(--red-kr);
+            padding-left: 15px;
+            margin: 20px 0;
+        }
+        @media (max-width: 768px) {
+            .detail-hero { flex-direction: column; text-align: center; }
+            .detail-img img { height: 300px; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">KR WORLD</div>
+        <ul class="nav-links">
+            <li><a href="demo.html#home">Home</a></li>
+            <li><a href="demo.html#riders">Riders</a></li>
+            <li><a href="demo.html#systems">Systems</a></li>
+        </ul>
+    </nav>
+
+    <main class="tab-content active">
+        <a href="#" onclick="history.back(); return false;" class="back-btn">← Quay lại</a>
+        
+        <section class="detail-hero">
+            <div class="detail-img">
+                <img src="./img/KRSa-Saberbravedragon.webp" alt="Kamen Rider Saber">
+            </div>
+            
+            <div class="detail-info">
+                <h1 class="page-title" style="text-align: left;">Kamen Rider Saber</h1>
+                <p class="quote">"Kết thúc của câu chuyện này, sẽ do ta quyết định!"</p>
+                
+                <div class="code-box">
+                    <h3>Sơ lược nhân vật</h3>
+                    <p>Kamiyama Touma là một tiểu thuyết gia đam mê sách, người vô tình bị cuốn vào cuộc chiến giữa tổ chức Sword of Logos và thế giới Megiddo. Bằng cách sử dụng thanh thánh kiếm Rekka và các Wonder Ride Books, anh chiến đấu để bảo vệ sự tồn vong của thế giới thực và Wonder World.</p>
+                </div>
+
+                <div class="form-group">
+                    <h2 style="font-size: 20px;">Thông tin chính</h2>
+                    <ul style="list-style: none; padding: 10px 0; color: #ccc;">
+                        <li><strong>Nhân vật chính:</strong> Kamiyama Touma</li>
+                        <li><strong>Chủ đề:</strong> Sách, Truyện cổ tích và Thánh kiếm</li>
+                        <li><strong>Thiết bị:</strong> Seiken Swordriver</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
